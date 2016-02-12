@@ -1,0 +1,48 @@
+// GMBAudioCOM.idl : IDL source for GMBAudioCOM
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (GMBAudioCOM.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(2924B6D3-8E33-44B3-8CFD-A4F108364EDD),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IGMBAudioPlayerCOMObj : IDispatch{
+	[id(1), helpstring("Loads the file and allocates memory to store the wave data")] HRESULT Construct(CHAR* _path);
+	[propget, id(2), helpstring("The state flags of the audio player")] HRESULT State([out, retval] LONG* pVal);
+	[propput, id(2), helpstring("The state flags of the audio player")] HRESULT State([in] LONG newVal);
+	[id(3), helpstring("Initialize all the internal components of the object (this is like a second constructor")] HRESULT Init(void);
+	[id(4), helpstring("Start audio playback in a new thread")] HRESULT Run(void);
+	};
+[
+	uuid(11CE4373-19CF-4FB7-8350-D545C22F852F),
+	version(1.0),
+]
+library GMBAudioCOMLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(67057808-2DC6-4449-A32E-57AEF776471E)		
+	]
+	dispinterface _IGMBAudioPlayerCOMObjEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(9F376ED9-4052-4DB0-B3BE-242339A3D037)		
+	]
+	coclass GMBAudioPlayerCOMObj
+	{
+		[default] interface IGMBAudioPlayerCOMObj;
+		[default, source] dispinterface _IGMBAudioPlayerCOMObjEvents;
+	};
+};
+

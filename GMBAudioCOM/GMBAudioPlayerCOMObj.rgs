@@ -1,0 +1,26 @@
+HKCR
+{
+	GMBCOM.GMBAudioPlayerCOMObj.1 = s 'GMBAudioPlayerCOMObj Class'
+	{
+		CLSID = s '{9F376ED9-4052-4DB0-B3BE-242339A3D037}'
+	}
+	GMBCOM.GMBAudioPlayerCOMObj = s 'GMBAudioPlayerCOMObj Class'
+	{		
+		CurVer = s 'GMBCOM.GMBAudioPlayerCOMObj.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9F376ED9-4052-4DB0-B3BE-242339A3D037} = s 'GMBAudioPlayerCOMObj Class'
+		{
+			ProgID = s 'GMBCOM.GMBAudioPlayerCOMObj.1'
+			VersionIndependentProgID = s 'GMBCOM.GMBAudioPlayerCOMObj'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			TypeLib = s '{11CE4373-19CF-4FB7-8350-D545C22F852F}'
+			Version = s '1.0'
+		}
+	}
+}

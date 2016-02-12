@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GMBAudioCOM", "GMBAudioCOM\GMBAudioCOM.vcxproj", "{CEF8EB97-8F4D-4A50-888F-A39E805F6FAB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GMBAudioCOMPS", "GMBAudioCOM\GMBAudioCOMPS.vcxproj", "{602176E8-41ED-4529-B659-FD74E88786EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CEF8EB97-8F4D-4A50-888F-A39E805F6FAB} = {CEF8EB97-8F4D-4A50-888F-A39E805F6FAB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEF8EB97-8F4D-4A50-888F-A39E805F6FAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CEF8EB97-8F4D-4A50-888F-A39E805F6FAB}.Debug|Win32.Build.0 = Debug|Win32
+		{CEF8EB97-8F4D-4A50-888F-A39E805F6FAB}.Release|Win32.ActiveCfg = Release|Win32
+		{CEF8EB97-8F4D-4A50-888F-A39E805F6FAB}.Release|Win32.Build.0 = Release|Win32
+		{602176E8-41ED-4529-B659-FD74E88786EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{602176E8-41ED-4529-B659-FD74E88786EB}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
